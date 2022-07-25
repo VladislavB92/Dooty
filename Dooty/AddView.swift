@@ -9,10 +9,6 @@ import SwiftUI
 
 struct AddView: View {
     
-    enum Field: Hashable {
-            case toDoTask
-        }
-    
     @Environment(\.managedObjectContext) private var viewContext
     
     // Returns back to list when saving the task
@@ -20,23 +16,35 @@ struct AddView: View {
     
     
     @State var toDoTask: String = ""
-    @FocusState private var focusedField: Field?
+    @FocusState var titleField: Bool
     
     var body: some View {
-        TextField("Add task", text: $toDoTask)
-            .focused($focusedField, equals: .toDoTask)
-            .padding()
-            .toolbar {
-                Button(action: {
-                    if toDoTask.isEmpty {
-                        focusedField = .toDoTask
-                    } else {
-                        saveTask()
-                    }
-                }) {
-                    Text("Add to list")
+        VStack {
+            TextField("Add Dootie", text: $toDoTask)
+                .focused($titleField)
+                .submitLabel(.done)
+                .onSubmit {
+                    saveTask()
                 }
-            }
+                .padding()
+                .font(.system(size: 30))
+                .toolbar {
+                    Button(action: {
+                        saveTask()
+                    }) {
+                        Text("Add to list")
+                    }
+                }
+                .onAppear {
+                    // Hack for SwiftUI to display keyboard in TextField
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                        titleField = true
+                    }
+                }
+                .padding()
+            
+            Spacer()
+        }
         
     }
     

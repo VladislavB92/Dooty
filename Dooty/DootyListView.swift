@@ -21,7 +21,10 @@ struct DootyListView: View {
             List {
                 ForEach(tasks) { listedTask in
                     NavigationLink(
-                        destination: ViewTask(task: listedTask, editableTask: listedTask.title!)
+                        destination: ViewTask(
+                            task: listedTask,
+                            editableTask: listedTask.title!
+                        )
                     ) {
                         Text(listedTask.title!)
                             .lineLimit(1)

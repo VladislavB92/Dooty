@@ -15,25 +15,32 @@ struct ViewTask: View {
     @State var editableTask: String
     
     var body: some View {
-        TextField("Task", text: $editableTask, onEditingChanged: { typing in
-            if typing == false {
+        VStack {
+            TextField("Task", text: $editableTask, onEditingChanged: { typing in
+                if typing == false {
+                    saveEditedTask()
+                }
+            })
+            .submitLabel(.done)
+            .onSubmit {
                 saveEditedTask()
             }
-        })
-        .padding()
-        .font(.system(size: 30))
-        .toolbar {
-            Button(action: {
-                deleteTask()
-            }) {
-                Label(
-                    "Delete task",
-                    systemImage: "xmark.bin.circle.fill"
-                )
-                .foregroundColor(Color(.red))
+            .padding()
+            .font(.system(size: 30))
+            .toolbar {
+                Button(action: {
+                    deleteTask()
+                }) {
+                    Label(
+                        "Delete task",
+                        systemImage: "xmark.bin.circle.fill"
+                    )
+                    .foregroundColor(Color(.red))
+                }
             }
+            .padding()
+            Spacer()
         }
-        
     }
     
     func saveEditedTask() {
