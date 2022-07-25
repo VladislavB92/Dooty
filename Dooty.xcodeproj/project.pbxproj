@@ -13,6 +13,9 @@
 		F50782C72887299700A5B675 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F50782C62887299700A5B675 /* Preview Assets.xcassets */; };
 		F50782C92887299700A5B675 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = F50782C82887299700A5B675 /* Persistence.swift */; };
 		F50782CC2887299700A5B675 /* Dooty.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F50782CA2887299700A5B675 /* Dooty.xcdatamodeld */; };
+		F52798FD288ED8E40081B250 /* ViewTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = F52798FC288ED8E40081B250 /* ViewTask.swift */; };
+		F53C7717288D450F008257F9 /* DootyListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F53C7716288D450F008257F9 /* DootyListView.swift */; };
+		F53C7719288D4BA1008257F9 /* AddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F53C7718288D4BA1008257F9 /* AddView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +26,9 @@
 		F50782C62887299700A5B675 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		F50782C82887299700A5B675 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		F50782CB2887299700A5B675 /* Dooty.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Dooty.xcdatamodel; sourceTree = "<group>"; };
+		F52798FC288ED8E40081B250 /* ViewTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewTask.swift; sourceTree = "<group>"; };
+		F53C7716288D450F008257F9 /* DootyListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DootyListView.swift; sourceTree = "<group>"; };
+		F53C7718288D4BA1008257F9 /* AddView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +62,9 @@
 			isa = PBXGroup;
 			children = (
 				F50782BF2887299600A5B675 /* DootyApp.swift */,
+				F53C7718288D4BA1008257F9 /* AddView.swift */,
+				F52798FC288ED8E40081B250 /* ViewTask.swift */,
+				F53C7716288D450F008257F9 /* DootyListView.swift */,
 				F50782C12887299600A5B675 /* ContentView.swift */,
 				F50782C32887299700A5B675 /* Assets.xcassets */,
 				F50782C82887299700A5B675 /* Persistence.swift */,
@@ -145,6 +154,9 @@
 			files = (
 				F50782C92887299700A5B675 /* Persistence.swift in Sources */,
 				F50782CC2887299700A5B675 /* Dooty.xcdatamodeld in Sources */,
+				F53C7719288D4BA1008257F9 /* AddView.swift in Sources */,
+				F52798FD288ED8E40081B250 /* ViewTask.swift in Sources */,
+				F53C7717288D450F008257F9 /* DootyListView.swift in Sources */,
 				F50782C22887299600A5B675 /* ContentView.swift in Sources */,
 				F50782C02887299600A5B675 /* DootyApp.swift in Sources */,
 			);

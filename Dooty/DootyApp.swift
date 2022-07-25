@@ -13,7 +13,7 @@ struct DootyApp: App {
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            DootyListView()
                 .environment(\.managedObjectContext, persistenceController.container.viewContext)
         }
     }
